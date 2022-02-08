@@ -1,0 +1,502 @@
+[
+  {
+    symbol: 'DEFIUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'DENTUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00005103'
+  },
+  {
+    symbol: 'DGBUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00034471'
+  },
+  {
+    symbol: 'DODOUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00004650'
+  },
+  {
+    symbol: 'DOGEBUSD',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'DOGEUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'DOTUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00022916'
+  },
+  {
+    symbol: 'DUSKUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'DYDXUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'EGLDUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'ENJUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'ENSUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'EOSUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'ETCUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'ETHBUSD',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00007693'
+  },
+  {
+    symbol: 'ETHUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00001620'
+  },
+  {
+    symbol: 'FILUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00003630'
+  },
+  {
+    symbol: 'FLMUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'FTMUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00006292'
+  },
+  {
+    symbol: 'FTTBUSD',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00008297'
+  },
+  {
+    symbol: 'GALAUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'GRTUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00008687'
+  },
+  {
+    symbol: 'GTCUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'HBARUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'HNTUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'HOTUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00043255'
+  },
+  {
+    symbol: 'ICPUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'ICXUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'IOSTUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'IOTAUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00016216'
+  },
+  {
+    symbol: 'IOTXUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00083052'
+  },
+  {
+    symbol: 'KAVAUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00001218'
+  },
+  {
+    symbol: 'KEEPUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00024705'
+  },
+  {
+    symbol: 'KLAYUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'KNCUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'KSMUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00011276'
+  },
+  {
+    symbol: 'LINAUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00009613'
+  },
+  {
+    symbol: 'LINKUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'LITUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'LPTUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'LRCUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'LTCUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00002119'
+  },
+  {
+    symbol: 'LUNAUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00004577'
+  },
+  {
+    symbol: 'MANAUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'MASKUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'MATICUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'MKRUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00007322'
+  },
+  {
+    symbol: 'MTLUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'NEARUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'NEOUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'NKNUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'NUUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'OCEANUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'OGNUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'OMGUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'ONEUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00001933'
+  },
+  {
+    symbol: 'ONTUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'PEOPLEUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00007902'
+  },
+  {
+    symbol: 'QTUMUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00003445'
+  },
+  {
+    symbol: 'RAYUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00002082'
+  },
+  {
+    symbol: 'REEFUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00043586'
+  },
+  {
+    symbol: 'RENUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'RLCUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'ROSEUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'RSRUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'RUNEUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00001379'
+  },
+  {
+    symbol: 'RVNUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'SANDUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00006192'
+  },
+  {
+    symbol: 'SCUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'SFPUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'SKLUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'SNXUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'SOLBUSD',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00024038'
+  },
+  {
+    symbol: 'SOLUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00025785'
+  },
+  {
+    symbol: 'SRMUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'STMXUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'STORJUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'SUSHIUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'SXPUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'THETAUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'TLMUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'TOMOUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'TRBUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'TRXUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'UNFIUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'UNIUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'VETUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00008682'
+  },
+  {
+    symbol: 'WAVESUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00007796'
+  },
+  {
+    symbol: 'XEMUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'XLMUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00001935'
+  },
+  {
+    symbol: 'XMRUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00011778'
+  },
+  {
+    symbol: 'XRPBUSD',
+    fundingTime: 1644307200003,
+    fundingRate: '-0.00005788'
+  },
+  {
+    symbol: 'XRPUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'XTZUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'YFIIUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'YFIUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00004645'
+  },
+  {
+    symbol: 'ZECUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'ZENUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  },
+  {
+    symbol: 'ZILUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00006583'
+  },
+  {
+    symbol: 'ZRXUSDT',
+    fundingTime: 1644307200003,
+    fundingRate: '0.00010000'
+  }
+]

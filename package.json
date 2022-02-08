@@ -1,0 +1,18 @@
+{
+  "name": "binance-futures-connector",
+  "version": "1.0.0",
+  "description": "币安合约sdk",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["binance-futures-connector","binance-futures-swap","binance-futures"],
+  "author": "topbrids@gmail.com",
+  "license": "ISC",
+  "repository": "https://github.com/lap888/binance-futures-connector.git",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "https-proxy-agent": "^5.0.0",
+    "ws": "^8.4.2"
+  }
+}
