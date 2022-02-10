@@ -1,3 +1,4 @@
+const { validateRequiredParameters } = require('../helpers/validation.js')
 /**
  * 行情接口
  * @module AccountTrades
@@ -207,6 +208,18 @@ const AccountTrades = superclass => class extends superclass {
                 symbol: symbol.toUpperCase(),
                 leverage: leverage
             })
+        )
+    }
+    /**
+     * 杠杆分层标准 (USER_DATA)
+     * @param {*} options {symbol	STRING	NO	recvWindow	LONG	NO	timestamp	LONG	YES}
+     * @returns 
+     */
+    leverageBracket(options = {}) {
+        return this.signRequest(
+            'GET',
+            '/fapi/v1/leverageBracket',
+            options
         )
     }
 }

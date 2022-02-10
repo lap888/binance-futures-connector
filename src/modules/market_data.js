@@ -1,3 +1,4 @@
+const { validateRequiredParameters } = require('../helpers/validation.js')
 /**
  * 行情接口
  * @module MarketData
