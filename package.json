@@ -1,7 +1,7 @@
 {
   "name": "binance-futures-connector",
-  "version": "1.0.0",
-  "description": "币安合约sdk",
+  "version": "1.0.1",
+  "description": "币安合约sdk持续更新,欢迎PR一起完善。",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
