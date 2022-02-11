@@ -64,8 +64,6 @@ const AccountTrades = superclass => class extends superclass {
         )
     }
 
-
-
     /**
      * 延长listenKey有效期 (USER_STREAM)<br>
      *
@@ -158,11 +156,8 @@ const AccountTrades = superclass => class extends superclass {
 
     /**
      * 下单 (TRADE)<br>
-     *
      * POST /fapi/v1/order (HMAC SHA256)<br>
-     *
      * {@link https://binance-docs.github.io/apidocs/futures/cn/#user_data-2}
-     *
      * @param {string} symbol
      * @param {string} side 买卖方向 SELL, BUY
      * @param {string} positionSide 持仓方向，单向持仓模式下非必填，默认且仅可填BOTH;在双向持仓模式下必填,且仅可选择 LONG 或 SHORT
@@ -219,6 +214,24 @@ const AccountTrades = superclass => class extends superclass {
         return this.signRequest(
             'GET',
             '/fapi/v1/leverageBracket',
+            options
+        )
+    }
+
+    /**
+     * 获取账户损益资金流水(USER_DATA)
+     * @param {*} options symbol	STRING	NO	交易对
+            incomeType	STRING	NO	收益类型 "TRANSFER"划转，"WELCOME_BONUS"体验金，"REALIZED_PNL"已实现盈亏，"FUNDING_FEE"资金费用，"COMMISSION"手续费，"INSURANCE_CLEAR"爆仓清算，"REFERRAL_KICKBACK"推荐人返佣, "COMMISSION_REBATE"被推荐人返现，"DELIVERED_SETTELMENT"下架结算, "COIN_SWAP_DEPOSIT"资产转换转入, "COIN_SWAP_WITHDRAW" 资产转换转出
+            startTime	LONG	NO	起始时间
+            endTime	LONG	NO	结束时间
+            limit	INT	NO	返回的结果集数量 默认值:100 最大值:1000
+            recvWindow	LONG	NO	timestamp	LONG	YES
+     * @returns 
+     */
+    income(options = {}) {
+        return this.signRequest(
+            'GET',
+            '/fapi/v1/income',
             options
         )
     }
