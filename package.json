@@ -1,6 +1,6 @@
 {
   "name": "binance-futures-connector",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "币安合约sdk持续更新,欢迎PR一起完善。",
   "main": "src/index.js",
   "scripts": {
