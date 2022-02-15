@@ -23,48 +23,6 @@ const AccountTrades = superclass => class extends superclass {
     }
 
     /**
-     * 获取交易规则和交易对 NONE
-     * @param {*} options 
-     * 
-     * {@link https://binance-docs.github.io/apidocs/futures/cn/#3f1907847c} 
-     */
-    exchangeInfo(options = {}) {
-        return this.publicRequest(
-            'GET',
-            '/fapi/v1/exchangeInfo',
-            options
-        )
-    }
-    /**
-     * 获取服务器时间
-     * @param {*} options 
-     * {@link https://binance-docs.github.io/apidocs/futures/cn/#3f1907847c} 
-     */
-    time(options = {}) {
-        return this.publicRequest(
-            'GET',
-            '/fapi/v1/time',
-            options
-        )
-    }
-
-    /**
-     * 获取交易对价格
-     * {@link https://binance-docs.github.io/apidocs/futures/cn/#8ff46b58de} 
-     * @param {*} symbol 
-     * @param {*} options 
-     * @returns 
-     */
-    price(options = {}) {
-        // symbol = symbol + "USDT";
-        return this.publicRequest(
-            'GET',
-            '/fapi/v1/ticker/price',
-            options
-        )
-    }
-
-    /**
      * 延长listenKey有效期 (USER_STREAM)<br>
      *
      * PUT /fapi/v1/listenKey<br>
@@ -122,22 +80,6 @@ const AccountTrades = superclass => class extends superclass {
             'GET',
             '/fapi/v1/positionSide/dual',
             options
-        )
-    }
-    /**
-     * 获取交易对深度
-     * @param {*} symbol 
-     * @param {*} options 
-     * @returns 
-     */
-    getDepth(symbol, options = {}) {
-        validateRequiredParameters({ symbol })
-        return this.signRequest(
-            'GET',
-            '/fapi/v1/depth',
-            Object.assign(options, {
-                symbol: symbol
-            })
         )
     }
 
