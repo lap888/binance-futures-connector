@@ -130,6 +130,35 @@ const MarketData = superclass => class extends superclass {
     }
 
     /**
+     * 标准的OHLC结构，用来画K线和指标计算分析。由exchange.GetRecords()函数返回此结构的数组。每一个Record结构代表一个K线柱，即一根K线BAR。Record其中的Time为这根K线柱周期的起始时间。
+     * @param {*} symbol 
+     * @param {*} interval 
+     * @param {*} limit 
+     * @returns 
+     */
+    records(symbol, interval, limit = 1000) {
+        let records = [];
+        return new Promise((resolve, reject) => {
+            this.klines(symbol, interval, { limit: limit }).then(res => {
+                res.data.map(v => {
+                    let d = {};
+                    d.Time = v[0]
+                    d.Open = Number(v[1])
+                    d.High = Number(v[2])
+                    d.Low = Number(v[3])
+                    d.Close = Number(v[4])
+                    d.Volume = Number(v[5])
+                    records.push(d);
+                });
+                resolve(records)
+            }).catch(err => {
+                console.log(err)
+                reject(records)
+            })
+        });
+    }
+
+    /**
      * 标记价格K线数据 symbol	STRING	YES	交易对
                     interval	ENUM	YES	时间间隔
                     startTime	LONG	NO	起始时间

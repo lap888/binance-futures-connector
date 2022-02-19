@@ -1,10 +1,10 @@
 {
   "name": "binance-futures-connector",
-  "version": "1.0.3",
-  "description": "币安合约sdk持续更新,欢迎PR一起完善。",
+  "version": "1.0.4",
+  "description": "币安-合约-sdk,持续更新,欢迎PR一起完善,微信:wkc19891。",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": ""
   },
   "keywords": ["binance-futures-connector","binance-futures-swap","binance-futures"],
   "author": "topbrids@gmail.com",
