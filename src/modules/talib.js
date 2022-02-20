@@ -178,6 +178,19 @@ const Std = {
         }
         return R;
     },
+    _rma: function (S, period) {
+        let R = Std._zeros(S.length);
+        let multiplier = 1 / period;
+        let j = Std._skip(S, period);
+        Std._set(R, 0, j, NaN);
+        if (j < S.length) {
+            R[j] = Std._avg(S, j + 1);
+            for (let i = j + 1; i < S.length; i++) {
+                R[i] = S[i] * multiplier + (1 - multiplier) * R[i - 1];
+            }
+        }
+        return R;
+    },
     _cmp: function (arr, start, end, cmpFunc) {
         let v = arr[start];
         for (let i = start; i < end; i++) {
@@ -291,14 +304,15 @@ const DMI = (records, period) => {
     let down = Std._move_diff(ticksLow);
     let dm1 = Std._diffDM1(up, down)
     let dm2 = Std._diffDM2(up, down)
-    let edm1 = Std._ema(dm1, period)
-    let edm2 = Std._ema(dm2, period)
+    let edm1 = Std._rma(dm1, period)
+    let edm2 = Std._rma(dm2, period)
     let truerange = ATR(records, period);
-    let di1 = Std._diffSub(edm1, truerange);
-    let di2 = Std._diffSub(edm2, truerange)
+    let rtruerange = Std._rma(truerange, period)
+    let di1 = Std._diffSub(edm1, rtruerange);
+    let di2 = Std._diffSub(edm2, rtruerange)
     let sum = Std._sumArry(di1, di2)
     let adx = Std._adx(di1, di2, sum)
-    let eadx = Std._ema(adx, period)
+    let eadx = Std._rma(adx, period)
     return [di1, di2, eadx]
 
 }
