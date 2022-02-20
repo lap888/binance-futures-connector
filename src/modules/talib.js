@@ -18,7 +18,34 @@ const Std = {
         }
         return sum;
     },
-
+    _sumArry: function (a, b) {
+        let d = [];
+        for (let i = 0; i < b.length; i++) {
+            if (isNaN(a[i]) || isNaN(b[i])) {
+                d.push(NaN);
+            } else {
+                d.push(a[i] + b[i]);
+            }
+        }
+        return d;
+    },
+    _adx: function (a, b, c) {
+        let d = [];
+        let l = Math.min(a.length, b.length, c.length)
+        for (let i = 0; i < l; i++) {
+            if (isNaN(a[i]) || isNaN(b[i])) {
+                d.push(NaN);
+            } else {
+                let sum = 1;
+                if (c[i] != 0) {
+                    sum = c[i]
+                }
+                let _d = (Math.abs(a[i] - b[i]) / sum) * 100;
+                d.push(_d);
+            }
+        }
+        return d;
+    },
     _avg: function (arr, num) {
         let n = 0;
         let sum = 0.0;
@@ -53,6 +80,48 @@ const Std = {
                 d.push(NaN);
             } else {
                 d.push(a[i] - b[i]);
+            }
+        }
+        return d;
+    },
+    _diffSub: function (a, b) {
+        let d = [];
+        let length = Math.min(a.length, b.length)
+        for (let i = 0; i < length; i++) {
+            if (isNaN(a[i]) || isNaN(b[i])) {
+                d.push(NaN);
+            } else {
+                d.push((a[i] / b[i]) * 100);
+            }
+        }
+        return d;
+    },
+    _diffDM1: function (a, b) {
+        let d = [];
+        for (let i = 0; i < b.length; i++) {
+            if (isNaN(a[i]) || isNaN(b[i])) {
+                d.push(0);
+            } else {
+                if (a[i] > b[i] && a[i] > 0) {
+                    d.push(a[i]);
+                } else {
+                    d.push(0);
+                }
+            }
+        }
+        return d;
+    },
+    _diffDM2: function (a, b) {
+        let d = [];
+        for (let i = 0; i < b.length; i++) {
+            if (isNaN(a[i]) || isNaN(b[i])) {
+                d.push(0);
+            } else {
+                if (b[i] > a[i] && b[i] > 0) {
+                    d.push(b[i]);
+                } else {
+                    d.push(0);
+                }
             }
         }
         return d;
@@ -145,6 +214,34 @@ const Std = {
         }
         return ticks;
     },
+    _ticksHigh: function (records) {
+        if (records.length === 0) {
+            return [];
+        }
+        let ticks = [];
+        if (typeof (records[0].High) !== 'undefined') {
+            for (let i = 0; i < records.length; i++) {
+                ticks.push(records[i].High);
+            }
+        } else {
+            ticks = records;
+        }
+        return ticks;
+    },
+    _ticksLow: function (records) {
+        if (records.length === 0) {
+            return [];
+        }
+        let ticks = [];
+        if (typeof (records[0].Low) !== 'undefined') {
+            for (let i = 0; i < records.length; i++) {
+                ticks.push(records[i].Low);
+            }
+        } else {
+            ticks = records;
+        }
+        return ticks;
+    },
 };
 
 /**
@@ -180,18 +277,30 @@ const MA = (records, period) => {
     period = typeof (period) === 'undefined' ? 9 : period;
     return Std._sma(Std._ticks(records), period);
 }
+/**
+ * 动向指标 [+DI, -DI,ADX]
+ * @param {*} records 
+ * @param {*} period 
+ * @returns [+DI, -DI,ADX]
+ */
+const DMI = (records, period) => {
+    period = typeof (period) === 'undefined' ? 14 : period;
+    let ticksHigh = Std._ticksHigh(records);
+    let up = Std._move_diff(ticksHigh);
+    let ticksLow = Std._ticksLow(records);
+    let down = Std._move_diff(ticksLow);
+    let dm1 = Std._diffDM1(up, down)
+    let dm2 = Std._diffDM2(up, down)
+    let edm1 = Std._ema(dm1, period)
+    let edm2 = Std._ema(dm2, period)
+    let truerange = ATR(records, period);
+    let di1 = Std._diffSub(edm1, truerange);
+    let di2 = Std._diffSub(edm2, truerange)
+    let sum = Std._sumArry(di1, di2)
+    let adx = Std._adx(di1, di2, sum)
+    let eadx = Std._ema(adx, period)
+    return [di1, di2, eadx]
 
-const getDate = (timetamp = "") => {
-    let myDate = timetamp == "" ? new Date() : new Date(timetamp);  //获取js时间
-    let year = myDate.getFullYear(); //获取年
-    let month = myDate.getMonth() + 1;//获取月
-    let date = myDate.getDate();//获取日
-    let h = myDate.getHours(); //获取小时数(0-23)
-    let m = myDate.getMinutes(); //获取分钟数(0-59)
-    let s = myDate.getSeconds();
-    //获取当前时间连接成的字符串
-    let now = year + '-' + Std._conver(month) + "-" + Std._conver(date) + " " + Std._conver(h) + ':' + Std._conver(m) + ":" + Std._conver(s);
-    return now
 }
 
 /**
@@ -324,8 +433,8 @@ const KDJ = (records, n, k, d) => {
 }
 
 /**
- * ATR，平均真实波幅
-   TA.ATR(数据, 周期)，ATR(数据, 周期)，默认周期参数为14，返回一个一维数组。
+ * RSI
+   TA.RSI(数据, 周期)RSI(数据, 周期)，默认周期参数为14，返回一个一维数组。
  * @param {*} records 
  * @param {*} period 
  * @returns 
@@ -474,6 +583,24 @@ const CMF = (records, periods) => {
     return ret;
 }
 
+/**
+ * timestamp to date
+ * @param {*} timetamp 
+ * @returns 
+ */
+const getDate = (timetamp = "") => {
+    let myDate = timetamp == "" ? new Date() : new Date(timetamp);  //获取js时间
+    let year = myDate.getFullYear(); //获取年
+    let month = myDate.getMonth() + 1;//获取月
+    let date = myDate.getDate();//获取日
+    let h = myDate.getHours(); //获取小时数(0-23)
+    let m = myDate.getMinutes(); //获取分钟数(0-59)
+    let s = myDate.getSeconds();
+    //获取当前时间连接成的字符串
+    let now = year + '-' + Std._conver(month) + "-" + Std._conver(date) + " " + Std._conver(h) + ':' + Std._conver(m) + ":" + Std._conver(s);
+    return now
+}
+
 module.exports = {
     Highest,
     Lowest,
@@ -487,6 +614,7 @@ module.exports = {
     ATR,
     Alligator,
     CMF,
+    DMI,
     getDate
 }
 
