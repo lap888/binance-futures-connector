@@ -523,7 +523,23 @@ const OBV = (records) => {
     }
     return R;
 }
-
+/**
+ * RATR
+ * @param {*} records 
+ * @param {*} cycle 
+ * @returns 
+ */
+const RATR = (records, cycle) => {
+    let trList = []
+    while (records.length > 1) {
+        high = records[records.length - 1].High
+        refClose = records[records.length - 2].Close
+        low = records[records.length - 1].Low
+        trList.unshift(Math.max(Math.max((high - low), Math.abs(refClose - high)), Math.abs(refClose - low)))
+        records = records.slice(0, -1)
+    }
+    return Std._rma(trList, cycle)
+}
 /**
  * ATR，平均真实波幅
    TA.ATR(数据, 周期)，ATR(数据, 周期)，默认周期参数为14，返回一个一维数组。
