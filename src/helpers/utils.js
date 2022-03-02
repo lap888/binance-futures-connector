@@ -50,7 +50,9 @@ const createRequest = (config) => {
       'Content-Type': 'application/x-www-form-urlencoded',
       'X-MBX-APIKEY': apiKey,
       'User-Agent': `${constants.appName}/${constants.appVersion}`
-    }
+    },
+    agent: false,
+    pool: { maxSockets: 100 }
   }
   if (ip != '' && ip != undefined && port != '' && port != undefined) {
     let httpsAgent = new HttpsProxyAgent({ host: ip, port: port })
