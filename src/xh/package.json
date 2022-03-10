@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      "@binance/connector@1.7.0",
+      "/Users/topbrids/xh_martin_quant"
+    ]
+  ],
+  "_from": "@binance/connector@1.7.0",
+  "_id": "@binance/connector@1.7.0",
+  "_inBundle": false,
+  "_integrity": "sha512-pt2mOp13BVgsozbVlLWqRZ8EyMGBMebZ0z4UXU9GMVdIo3PzPsQKD4LxI/6So9PJ1vejTaaGu85eoV29thHrDg==",
+  "_location": "/@binance/connector",
+  "_phantomChildren": {
+    "follow-redirects": "1.14.7"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@binance/connector@1.7.0",
+    "name": "@binance/connector",
+    "escapedName": "@binance%2fconnector",
+    "scope": "@binance",
+    "rawSpec": "1.7.0",
+    "saveSpec": null,
+    "fetchSpec": "1.7.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@binance/connector/-/connector-1.7.0.tgz",
+  "_spec": "1.7.0",
+  "_where": "/Users/topbrids/xh_martin_quant",
+  "author": {
+    "name": "Binance"
+  },
+  "bugs": {
+    "url": "https://github.com/binance/binance-connector/issues"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "https-proxy-agent": "^5.0.0",
+    "ws": "^7.5.0"
+  },
+  "description": "This is a lightweight library that works as a connector to the Binance public API.",
+  "devDependencies": {
+    "clean-jsdoc-theme": "^3.2.7",
+    "husky": "^6.0.0",
+    "jest": "^26.0.1",
+    "jsdoc": "^3.6.7",
+    "marked": "^2.1.1",
+    "nock": "^13.0.2",
+    "standard": "^14.3.4"
+  },
+  "engines": {
+    "node": ">=12.22.3",
+    "npm": ">=6.14.13"
+  },
+  "files": [
+    "src/**/*"
+  ],
+  "homepage": "https://github.com/binance/binance-connector#readme",
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ]
+  },
+  "keywords": [
+    "Binance",
+    "API"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "@binance/connector",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binance/binance-connector-node.git"
+  },
+  "scripts": {
+    "jsdoc": "jsdoc -c conf.json && ./docs_src/docs.sh",
+    "jsdoc:win": "jsdoc -c conf.json && npx jsdoc --readme ./docs_src/gettingStarted.md src/modules/blvt.js && node ./docs_src/generateDoc.js && RD /S /Q out",
+    "prepare": "husky install",
+    "standard": "standard",
+    "standard:fix": "standard --fix ",
+    "test": "jest --testPathIgnorePatterns=__tests__/websocket/subscription.test.js",
+    "test:watch": "jest --watchAll"
+  },
+  "standard": {
+    "ignore": [
+      "/docs/**/*.js"
+    ]
+  },
+  "version": "1.7.0"
+}
